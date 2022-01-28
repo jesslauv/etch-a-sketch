@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="sketch.js" defer></script>
+    <link href="sketch.css" rel="stylesheet"></link>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Etch-a-Sketch</h1>
+    <div class="button-container">
+    <button id="reDraw">Clear</button>
+    <button id=eraser onclick="erase()">Eraser</button>
+    <!-- <button class="color" onclick="drawBlack()">Black Color</button> -->
+    <button id="color" onclick="color()"><input type="color" id="colorpicker" value="#000000">Pick Color</input></button>
+    <div>
+        <p id="gridSize">Grid Size</p>
+        <input id="lengthInput" value="16" type="range" min="1" max="100" class="slider" oninput="recreateGrid()">
+        <datalist id="lengthInput">
+            <option value="1"></option>
+            <option value="10"></option>
+            <option value="20"></option>
+            <option value="30"></option>
+            <option value="40"></option>
+            <option value="50"></option>
+            <option value="60"></option>
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100"></option>
+            </datalist>
+        <p id="displayedLength">16</p>
+    </div>
+</div>
+    <div class="grid-container">
+    </div> 
+</body>
+</html>
